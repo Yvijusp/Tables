@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Z</title>
+    <script defer src="./scripts/order.js"></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navigation -->
+      <div class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Apie mus</a></li>
+          <li><a href="examples.html">Atlikti darbai</a></li>
+          <li><a href="order.html">Užsakyti stalą</a></li>
+          <li><a href="contacts.html">Kontaktai </a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="title">
+          <h2>Užsisakyk patinkantį stalą</h2>
+        </div>
+        <div class="d-flex">
+          <form>
+            <label>
+              <span class="fname">Vardas <span class="required">*</span></span>
+              <input type="text" name="fname" />
+            </label>
+            <label>
+              <span class="lname">Pavardė <span class="required">*</span></span>
+              <input type="text" name="lname" />
+            </label>
+            <label>
+              <span class="email">E-mail <span class="required">*</span></span>
+              <input
+                type="text"
+                name="email"
+                pattern="(^[^\s@]+@[^\s@]+$)"
+                title="email@email.com"
+              />
+            </label>
+            <label>
+              <span class="phone"
+                >Tel. numeris <span class="required">*</span></span
+              >
+              <input
+                type="tel"
+                name="phone"
+                pattern="(^[+][0-9]\d{10})"
+                title="Number: +3700000000"
+              />
+            </label>
+            <label>
+              <span>Stalo tipas <span class="required">*</span></span>
+            </label>
+            <select name="table-type">
+              <option value="">Išsirinkite stalo tipą</option>
+              <option value="night-table">Naktinis</option>
+              <option value="studies-table">Rašomasis</option>
+              <option value="kitchen-table">Valgomasis</option>
+              <option value="kid-table">Vaikiškas</option>
+              <option value="work-table">Darbo stalas</option>
+            </select>
+            <label>
+              <span>Stalo spalva <span class="required">*</span></span>
+            </label>
+            <select name="table-color">
+              <option value="">Išsirinkite spalvą</option>
+              <option value="white">Balta</option>
+              <option value="black">Juoda</option>
+              <option value="green">Žalia</option>
+              <option value="red">Raudona</option>
+            </select>
+            <label>
+              <span>Stalo išmatavymai <span class="required">*</span></span>
+            </label>
+            <select name="table-dimensions">
+              <option value="">Stalo išmatavymai</option>
+              <option value="xl">121.92cm x 81.28cm x 76.2cm</option>
+              <option value="l">120cm x 70cm x 60cm</option>
+              <option value="l-round">152.4cm x 76.2cm</option>
+              <option value="m">80cm x 220cm x 78 cm</option>
+              <option value="xs">30cm x 36cm</option>
+            </select>
+            <label>
+              <span>Stalo medžiaga <span class="required">*</span></span>
+            </label>
+            <select name="table-material">
+              <option value="">Išsirinkite stalo medžiagą</option>
+              <option value="wood">Medinis</option>
+              <option value="metal">Metalinis</option>
+              <option value="mixed">Kombinuotas</option>
+            </select>
+
+            <button type="sumbit">Užsakyti</button>
+
+            <p id="output-error"></p>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
